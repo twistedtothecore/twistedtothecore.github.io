@@ -2,15 +2,249 @@
 
 <head>
 <title>
- The Magic 8 Ball
- </title>
+The Bright Side Of The Dark Side
+
+</title>
 <style>
-  body{
-    background-color: #000000;
   }
   h1 {
     color:rgb(253, 165, 2);
   }
+
+  :root {
+  --white:#f1f1f1
+}
+body {
+  color: var(--white);
+  background-color: black;
+ 
+}
+div > span {
+  opacity: 0.15;
+}
+#T {
+    opacity: 1;
+  animation: flickerT 2s linear  reverse infinite;
+}
+#T::after {
+  content: '';
+  width: 150%;
+  -webkit-box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+  -moz-box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+  box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+}
+#W, #R {
+  animation: flickerWE 2s linear reverse infinite;
+  position: relative;
+}
+#W::after, 
+#W::before  {
+  content:' ';
+  width: 100px;
+  height: 100px;
+  background: var(--white);
+  position: absolute;
+  top: -50%;
+  left: 100%;
+  border-radius: 100%;
+  opacity: 0.05;
+  filter: blur(10px);
+}
+#W::after {
+  width: 200px;
+  height: 200px;
+  top: -150%;
+  left: -5%;
+  opacity: 0.1;
+  filter: blur(10px);
+}
+#R {
+  animation: flickerR 2s linear reverse infinite
+}
+
+#E {
+  animation: flickerR 2s linear reverse infinite
+}
+
+@keyframes flickerT {
+  0% {
+    opacity: 0.4;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.25;
+  }
+  45% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flickerWE {
+  0% {
+    opacity: 0.19;
+  }
+  5% {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 0.25;
+  }
+  15% {
+    opacity: 0.35;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  35% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.25;
+  }
+  45% {
+    opacity: 0.2;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.35;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes flickerR {
+  0% {
+    opacity: 0.15;
+  }
+  5% {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 0.12;
+  }
+  15% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.15;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  35% {
+    opacity: 0.05;
+  }
+  40% {
+    opacity: 0.12;
+  }
+  45% {
+    opacity: 0.15;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.18;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes flickerE {
+  0% {
+    opacity: 0.01;
+  }
+  5% {
+    opacity: 0.05;
+  }
+  10% {
+    opacity: 0.03;
+  }
+  15% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.07;
+  }
+  30% {
+    opacity: 0.1;
+  }
+  35% {
+    opacity: 0.05;
+  }
+  40% {
+    opacity: 0.06;
+  }
+  45% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.;
+  }
+  90% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
 
 ul {
     position: -webkit-sticky; /* Safari */
@@ -65,31 +299,28 @@ p {
     background: -moz-linear-gradient(right, rgb(253, 165, 2)nge, rgb(255, 174, 0), rgba(253, 140, 0, 0.666), rgba(253, 138, 0, 0.600), rgba(243, 138, 0, 0.322), rgba(0, 0, 0, 0)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, rgb(253, 165, 2)ge , rgb(255, 174, 0), rgba(253, 140, 0, 0.666), rgba(253, 138, 0, 0.600), rgba(243, 138, 0, 0.322), rgba(0, 0, 0, 0)); /* Standard syntax (must be last) */
 }
-<center>
+
 /* container for 8ball */
 .flex-container {
-     alignment: center;
-     width: 666px;
-     height: auto;
      background-color: black;
      display: flexbox;
      flex-direction: column;
      flex-wrap: wrap;
-     
+     justify-content: center;
 }
 
  #p1 { 
-     background-color: rgb(92, 0, 128);
+     background-color: black;
      width: 666px;
      height:auto;
       
-</center>
+
  } 
 /* begining of 8 ball code */
  h2 { 
      font-weight: 100; 
      font-size: 2.5em;
-     color: #E0DAFE;
+     color: rgb(255, 174, 0);
      }
      
      #content { 
@@ -104,7 +335,7 @@ p {
      div.eight-ball {
        background-color:black;
        border: 1px solid;
-       border-color: rgb(92, 0, 128); 
+       border-color: rgb(255, 174, 0); 
        border-radius: 50%;
        width: 300px;
        height: 300px;
@@ -115,7 +346,7 @@ p {
      
      div.answer {
        background-color:  #333;
-       border: 1px solid  #E0DAFE;
+       border: 1px solid rgb(255, 174, 0);
        border-radius: 50%;
        width: 50%;
        height: 50%;
@@ -125,25 +356,26 @@ p {
      p#eight {
        font-size: 5em;
        margin: 20% auto;
-       color:  #E0DAFE;
+       color:  rgb(255, 174, 0);
      }
      
      p#answer {
        padding: 23px;
-       color: #E0DAFE;
+       color:rgb(255, 174, 0);
        letter-spacing: 2px;
-       font-size:18px;
+       font-size:16px;
      }
      
      #question {
        margin: 20px;
        padding: 10px;
-       width: 400px;
-       font-size:22px;
+       width: 300px;
+       font-size:16px;
+       background-color: rgb(255, 174, 0);
      }
      
      #info {
-       font-size: 22px;
+       font-size: 16px;
      }
 </style>
 <script>
@@ -191,14 +423,29 @@ p {
     <center>
       
         <h1>
-Personal Webspot of TwistedToTheCore
+          <span id="t">T</span>
+          <span id="w">W</span>
+          <span id="e">I</span>
+          <span id="e">S</span>
+          <span id="r">T</span>
+          <span id="e">E</span>
+          <span id="e">D</span>
+          <span id="t">T</span>
+          <span id="e">O</span>
+          <span id="e">T</span>
+          <span id="r">H</span>
+          <span id="e">E</span>
+          <span id="t">C</span>
+          <span id="r">O</span>
+          <span id="e">R</span>
+          <span id="e">E</span>
         </h1>
     </center>
 
  
 <body>
-
-    /* main link /*
+    
+    <!--- main link -->
 <nav>
 
     <ul name="navbar" id="grad1">
@@ -210,18 +457,19 @@ Personal Webspot of TwistedToTheCore
     </ul>
 
   </nav>
-    /* main text body /*
+    <!-- main text body -->
+    <center>
   <p>
-     This is a personal page containing projects and concepts <br>
+     This is a personal page containing projects and concepts 
      I'm learning and experimenting with.
-<br>
+    </p>
+    <p>
         As my skill improves or I run across new 
-     information I will be updating and improving past<br>
+     information I will be updating and improving past
      past projects and adding new ones.
-
-
   </p>
-    
+  </center>
+    <center>
   <div class="flex-container">
     <div id="p1">
         <div id="content">
@@ -237,6 +485,7 @@ Personal Webspot of TwistedToTheCore
           </div>
      </div>
     </div>
+    </center>
   
 </body>
 
