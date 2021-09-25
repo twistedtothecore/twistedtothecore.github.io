@@ -1,22 +1,98 @@
-<!DOCTYPE html>
 <html>
- <head>
-   
-   <style>
-    
-     body {
-    background-color: #27006B;
-    color: #E0DAFE;
+
+<head>
+<title>
+ The Magic 8 Ball
+ </title>
+<style>
+  body{
+    background-color: #000000;
+    overflow: hidden;
+
   }
-  
-   h1 { 
+  h1 {
+    color:rgb(253, 165, 2);
+  }
+
+ul {
+    position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:lightgrey;
+}
+
+li {
+  float: left;
+
+ 
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 18px;
+  text-decoration: silver;
+
+}
+
+
+
+a:hover {
+  color: gray;
+} 
+
+
+
+ a:visited {
+  color: rgba(252, 172, 0, 0.726);
+  background-color: transparent;
+  text-decoration: underline;
+}
+p {
+  color: silver;
+}
+
+
+
+
+#grad1 {
+    height: 50px;
+    background: orange; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, rgb(253, 165, 2) , rgb(255, 174, 0), rgba(253, 140, 0, 0.666), rgba(253, 138, 0, 0.600), rgba(243, 138, 0, 0.322), rgba(0, 0, 0, 0)); /* For Safari 5.1 to 6.0 */
+    background: -moz-linear-gradient(right, rgb(253, 165, 2)nge, rgb(255, 174, 0), rgba(253, 140, 0, 0.666), rgba(253, 138, 0, 0.600), rgba(243, 138, 0, 0.322), rgba(0, 0, 0, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgb(253, 165, 2)ge , rgb(255, 174, 0), rgba(253, 140, 0, 0.666), rgba(253, 138, 0, 0.600), rgba(243, 138, 0, 0.322), rgba(0, 0, 0, 0)); /* Standard syntax (must be last) */
+}
+
+/* container for 8ball */
+.flex-container {
+     background-color: black;
+     display: flexbox;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: center;
+}
+
+ #p1 { 
+     background-color: rgb(92, 0, 128);
+     width: 666px;
+     height:auto;
+      
+
+ } 
+/* begining of 8 ball code */
+ h2 { 
      font-weight: 100; 
      font-size: 2.5em;
      color: #E0DAFE;
      }
      
      #content { 
-      width: 600px; 
+      width: 400px; 
       margin: 0 auto; 
       margin-top: 50px;      
       text-align: center; 
@@ -25,8 +101,9 @@
     }
      
      div.eight-ball {
-       background-color: black;
-       border: 1px solid black;
+       background-color:black;
+       border: 1px solid;
+       border-color: rgb(92, 0, 128); 
        border-radius: 50%;
        width: 300px;
        height: 300px;
@@ -35,96 +112,136 @@
        margin-top: 30px;
      }
      
-      div.answer {
-        background-color:  #333;
-        border: 1px solid  #E0DAFE;
-        border-radius: 50%;
-        width: 50%;
-        height: 50%;
-        margin: 25% auto;
+     div.answer {
+       background-color:  #333;
+       border: 1px solid  #E0DAFE;
+       border-radius: 50%;
+       width: 50%;
+       height: 50%;
+       margin: 25% auto;
      }
      
-      p#eight {
-        font-size: 5em;
-        margin: 20% auto;
-        color:  #E0DAFE;
+     p#eight {
+       font-size: 5em;
+       margin: 20% auto;
+       color:  #E0DAFE;
      }
      
-      p#answer {
-        padding: 23px;
-        color: #E0DAFE;
-        letter-spacing: 2px;
-        font-size:18px;
+     p#answer {
+       padding: 23px;
+       color: #E0DAFE;
+       letter-spacing: 2px;
+       font-size:18px;
      }
      
-      #question {
-        margin: 20px;
-        padding: 10px;
-        width: 400px;
-        font-size:22px;
+     #question {
+       margin: 20px;
+       padding: 10px;
+       width: 400px;
+       font-size:22px;
      }
      
      #info {
        font-size: 22px;
      }
+</style>
+<script>
+  // Answer array
+  var answers = ["It is certain", 
+                  "It is decidedly so", 
+                  "Without a doubt", 
+                  "Yes - definitely",
+                  "You may rely on it", 
+                  "As I see it, yes", 
+                  "Reflect and ask again", 
+                  "Outlook good", 
+                  "Yes", "Signs point to yes",
+                  "The stars do not favor this", 
+                  "Not at this time",
+                  "My sources say no", 
+                  "Outlook not so good",
+                  "Very doubtful", 
+                  "Reply hazy, try again", 
+                  "Ask again later", 
+                  "Better not tell you now",
+                  "Cannot predict now", 
+                  "All sources are busy"];
+   
+   window.onload = function() {
+      var eight = document.getElementById("eight");
+      var answer = document.getElementById("answer");
+      var eightball = document.getElementById("eight-ball");
+      var question = document.getElementById("question");
+      
+      eightball.addEventListener("click", function() {
+        if (question.value.length < 1) {
+          alert('Enter a question!');
+        } else {
+          eight.innerText = "";
+          var num = Math.floor(Math.random() * Math.floor(answers.length));
+          answer.innerText = answers[num];
+        }
+      });
+   };
+
+
+</script>
+</head>
+    <center>
+      
+        <h1>
+Personal Webspot of TwistedToTheCore
+        </h1>
+    </center>
+
+ 
+<body>
+
+    /* main link /*
+<nav>
+
+    <ul name="navbar" id="grad1">
+        <li><a href="home.asp">Home</a></li>
+        <li><a href="projects.asp">Projects</a></li>
+        <li><a href="contact.asp">Contact</a></li>
+        <li><a href="about.asp">About</a></li>
+
+    </ul>
+
+  </nav>
+    /* main text body /*
+  <p>
+     This is a personal page containing projects and concepts 
+     I'm learning and experimenting with.
+
+        As my skill improves or I run across new 
+     information I will be updating and improving past
+     past projects and adding new ones.
+
+
+  </p>
     
-     </style>
-  
-    <title>Magic 8 Ball</title>
-  
-   <script>
-    
-    // Answer array
-    var answers = ["It is certain", 
-                   "It is decidedly so", 
-                   "Without a doubt", 
-                   "Yes - definitely",
-                   "You may rely on it", 
-                   "As I see it, yes", 
-                   "Reflect and ask again", 
-                   "Outlook good", 
-                   "Yes", "Signs point to yes",
-                   "The stars do not favor this", 
-                   "Not at this time",
-                   "My sources say no", 
-                   "Outlook not so good",
-                   "Very doubtful", 
-                   "Reply hazy, try again", 
-                   "Ask again later", 
-                   "Better not tell you now",
-                   "Cannot predict now", 
-                   "All sources are busy"];
-    
-    window.onload = function() {
-       var eight = document.getElementById("eight");
-       var answer = document.getElementById("answer");
-       var eightball = document.getElementById("eight-ball");
-       var question = document.getElementById("question");
-       
-       eightball.addEventListener("click", function() {
-         if (question.value.length < 1) {
-           alert('Enter a question!');
-         } else {
-           eight.innerText = "";
-           var num = Math.floor(Math.random() * Math.floor(answers.length));
-           answer.innerText = answers[num];
-         }
-       });
-    };
-  
-  </script>
- </head>
- <body>
-  <div id="content">
-    <h1>The Magic 8 ball</h1>
-    <p id="info">Ask the all Knowing 8 Ball your question if you dare!</p>
-    <input type="text" id="question" />
-    <div id="eight-ball" class="eight-ball">
-      <div class="answer">
-        <p id="eight">8</p>
-        <p id="answer"></p>
-      </div>
+  <div class="flex-container">
+    <div id="p1">
+        <div id="content">
+            <h2>The Magic 8 ball</h2>
+            <p id="info">Ask the all Knowing 8 Ball your question if you dare!</p>
+            <input type="text" id="question" />
+            <div id="eight-ball" class="eight-ball">
+              <div class="answer">
+                <p id="eight">8</p>
+                <p id="answer"></p>
+              </div>
+            </div>
+          </div>
+     </div>
     </div>
-  </div>
- </body>
+  
+</body>
+
+
+  <footer>
+
+
+  </footer>
 </html>
