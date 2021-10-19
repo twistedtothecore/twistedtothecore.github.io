@@ -6,7 +6,7 @@ The Bright Side Of The Dark Side
 
 </title>
 <style>
-  }
+  
   h1 {
     color:rgb(72, 172, 122);
   }
@@ -319,6 +319,10 @@ p {
      font-size: 2.5em;
      color: rgba(72, 172, 122, .500);
      }
+     h2:hover {
+         color: silver;
+         transition: .15s;
+     }
      
      #content { 
       width: 400px; 
@@ -373,6 +377,13 @@ p {
      
      #info {
        font-size: 16px;
+     }
+     h3 {
+         color: silver;
+         height: 20px;
+     }
+     h3:hover {
+         color:rgba(72, 172, 122, .900)
      }
 </style>
 <script>
@@ -441,37 +452,23 @@ p {
 
  
 <body>
-    
-    <!--- main link -->
-<nav>
 
-    <ul name="navbar" id="grad1">
-        <li><a href="home.asp">Home</a></li>
-        <li><a href="projects.asp">Projects</a></li>
-        <li><a href="contact.asp">Contact</a></li>
-        <li><a href="about.asp">About</a></li>
-
-    </ul>
-
-  </nav>
     <!-- main text body -->
     <center>
-  <p>
-     This is a personal page containing projects and concepts 
-     I'm learning and experimenting with.
-    </p>
+  <h3>
+     Welcome to the Magick 8-Ball!
+  </h3>
     <p>
-        As my skill improves or I run across new 
-     information I will be updating and improving
-     past projects and adding new ones.
+        What secrets await you?<br> 
+        Do You Dare To Ask!?!?
   </p>
   </center>
     <center>
   <div class="flex-container">
     <div id="p1">
         <div id="content">
-            <h2>The Magic 8 ball</h2>
-            <p id="info">Ask the all Knowing 8 Ball your question if you dare!</p>
+            <h2>The All Knowing Magick 8 ball</h2>
+            <p id="info">Ask your question! </p>
             <input type="text" id="question" />
             <div id="eight-ball" class="eight-ball">
               <div class="answer">
