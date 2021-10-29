@@ -3225,7 +3225,7 @@ input, select, textarea {
 			height: 100%;
 			background-color: #212931;
 			background-image: url("overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgb(255, 255, 255)), url("Mountainroad.jpeg");
-			background-size: auto,								auto,														width: auto, height: 550px;
+			background-size: auto,								auto,														width: auto, height: 540px;
 			background-position: center,								center,														top center;
 			background-repeat: repeat,								no-repeat,													no-repeat;
 			background-attachment: scroll,								scroll,														scroll;
