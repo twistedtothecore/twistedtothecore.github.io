@@ -6,15 +6,118 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="main.css">
-	</head>
-	<body class="is-preload">
+		<style>
+    
+	*,* ::after, *::before {
+box-sizing:border-box;
+font-family: Gotham Rounded, sans-serif;
+}
 
+.clock {
+    width: 300px;
+    height:300px;
+    background-color: rgba(0, 216, 216, 0.1);
+    border-radius: 50%;
+    border: 2px solid rgb(0, 216, 216);
+    position: relative;
+}
+
+.number {
+    color:rgb(0, 216, 216);
+}
+
+.clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+}
+.clock .number1 { --rotation: 30deg; }
+.clock .number2 { --rotation: 60deg; }
+.clock .number3 { --rotation: 90deg; }
+.clock .number4 { --rotation: 120deg; }
+.clock .number5 { --rotation: 150deg; }
+.clock .number6 { --rotation: 180deg; }
+.clock .number7 { --rotation: 210deg; }
+.clock .number8 { --rotation: 240deg; }
+.clock .number9 { --rotation: 270deg; }
+.clock .number10 { --rotation: 300deg; }
+.clock .number11 { --rotation: 330deg; }
+
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 10px;
+    height: 50%;
+    background-color: rgb(248, 248, 248);
+    border: 1px solid rgb(0, 8, 8);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+
+}
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(2, 169, 175);
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.clock .hand.second {
+    width: 2px;
+    height: 46%;
+    background-color: rgb(7, 235, 243);
+}
+.clock .hand.minute {
+    width: 6px;
+    height: 38%;
+    background-color: rgb(7, 235, 243);
+}
+.clock .hand.hour {
+    width: 9px;
+    height: 32%;
+    background-color: rgb(7, 235, 243);
+}
+
+h3 {
+        color: rgb(0, 216, 216);
+        font-size: 25px;
+    }
+h4 {
+	color:rgb(0, 216, 216);
+	text-align: left;
+	padding-left: 230px;
+}	
+
+body {
+    color: rgb(7, 235, 243);
+}
+			
+		</style>	
+	</head>
+
+	<body class="is-preload">
+        
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
 						<a href="index.html" class="logo">About Me</a>
+				
 					</header>
 
 				<!-- Nav -->
@@ -28,16 +131,39 @@
 	
 					</ul>
 				</nav>
-
+                <body>
 				<!-- Main -->
+			
+
 					<div id="main">
 
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-								
-									<h1>A brief Bit About Myself</h1>
-									<p>Ive had a life long interest in Technology <br>
+									<center>
+										<div class="clock">
+											<div class="hand hour" data-hour-hand></div>
+											<div class="hand minute" data-minute-hand></div>
+											<div class="hand second" data-second-hand></div>
+											<div class="number number1">1</div>
+											<div class="number number2">2</div>
+											<div class="number number3">3</div>
+											<div class="number number4">4</div>
+											<div class="number number5">5</div>
+											<div class="number number6">6</div>
+											<div class="number number7">7</div>
+											<div class="number number8">8</div>
+											<div class="number number9">9</div>
+											<div class="number number10">10</div>
+											<div class="number number11">11</div>
+											<div class="number number12">12</div>
+										 
+										</div>
+										</center>
+										<center>
+									<h3>A brief Bit About Myself</h3>
+									</center>
+									<h4>Ive had a life long interest in Technology <br>
 									   From my earliest time typing away at a dos command line<br>
 									   to building websites and basic apps in highschool, <br>
 									   To diving into Digital Photography and photo editing.<br>
@@ -47,30 +173,50 @@
 									   difficult projects with tight deadlines and overcoming unforseen<br>
 									   complications to always meet those deadlines.<br>
 									   Now I find myself rediscovering Tech and remembering how much <br>
-									   I enjoy creating. </p>
+									   I enjoy creating. </h4>
 								</header>
 								<center>
-								<div class="image main"><img src="Mountainroad.jpeg" alt="" style="width: 600px; height:400px"></div>
+								<div class="image main"><a href="elements.html"><img src="Mountainroad.jpeg" alt="" style="width: 600px; height:400px"></a></div>
 								</center>
 								<center>
-								<h3><em> My photography is featured thru out this site.</em></h3>
+								<h3><em><a href="elements.html">My photography is featured thru out this site.</a></em></h3>
                                 </center>
 					</div>
-			
+					</div>
+				</body>
 					<footer>
-			
-					</footer>
+						<!--clock script -->
+						<script>
+						setInterval(setClock, 1000)
 
-			</div>
+						const hourHand = document.querySelector('[data-hour-hand]')
+						const minuteHand = document.querySelector('[data-minute-hand]')
+						const secondHand = document.querySelector('[data-second-hand]')
+						
+						
+						function setClock() {
+							const currentDate= new Date()
+							const secondsRatio = currentDate.getSeconds() / 60
+							const minutesRatio = (secondsRatio + currentDate.getMinutes()) / 60
+							const hoursRatio = (minutesRatio + currentDate.getHours()) / 12
+							setRotation(secondHand, secondsRatio)
+							setRotation(minuteHand, minutesRatio)
+							setRotation(hourHand, hoursRatio)
+						
+						}
+						function setRotation(element, rotationRatio) {
+							element.style.setProperty('--rotation', rotationRatio * 360)
+						}
+						setClock()
+						</script>
 
-		<!-- Scripts -->
-			<script src="jquery.min.js"></script>
+						<!--script links-->
+					<script src="jquery.min.js"></script>
 			<script src="jquery.scrollex.min.js"></script>
 			<script src="jquery.scrolly.min.js"></script>
 			<script src="browser.min.js"></script>
 			<script src="breakpoints.min.js"></script>
 			<script src="util.js"></script>
 			<script src="main.js"></script>
-
-	</body>
+					</footer>	
 </html>
