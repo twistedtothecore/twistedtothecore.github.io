@@ -3194,15 +3194,15 @@ input, select, textarea {
 	}
 
 	table thead {
-		border-bottom-color: #eeeeee;
+		border-bottom-color: #414952;
 	}
 
 	table tfoot {
-		border-top-color: #eeeeee;
+		border-top-color: #414952;
 	}
 
 	table.alt tbody tr td {
-		border-color: #eeeeee;
+		border-color: #414952;
 	}
 
 /* Wrapper */

@@ -1,0 +1,372 @@
+   
+  h1 {
+    color:rgb(72, 172, 122);
+  }
+
+div > span {
+  opacity: 0.15;
+}
+#T {
+    opacity: 1;
+  animation: flickerT 2s linear  reverse infinite;
+}
+#T::after {
+  content: '';
+  width: 150%;
+  -webkit-box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+  -moz-box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+  box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+}
+#W, #R {
+  animation: flickerWE 2s linear reverse infinite;
+  position: relative;
+}
+#W::after, 
+#W::before  {
+  content:' ';
+  width: 100px;
+  height: 100px;
+  background: var(--white);
+  position: absolute;
+  top: -50%;
+  left: 100%;
+  border-radius: 100%;
+  opacity: 0.05;
+  filter: blur(10px);
+}
+#W::after {
+  width: 200px;
+  height: 200px;
+  top: -150%;
+  left: -5%;
+  opacity: 0.1;
+  filter: blur(10px);
+}
+#R {
+  animation: flickerR 2s linear reverse infinite
+}
+
+#E {
+  animation: flickerR 2s linear reverse infinite
+}
+
+@keyframes flickerT {
+  0% {
+    opacity: 0.4;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.25;
+  }
+  45% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flickerWE {
+  0% {
+    opacity: 0.19;
+  }
+  5% {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 0.25;
+  }
+  15% {
+    opacity: 0.35;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  35% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.25;
+  }
+  45% {
+    opacity: 0.2;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.35;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes flickerR {
+  0% {
+    opacity: 0.15;
+  }
+  5% {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 0.12;
+  }
+  15% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.15;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  35% {
+    opacity: 0.05;
+  }
+  40% {
+    opacity: 0.12;
+  }
+  45% {
+    opacity: 0.15;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.18;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes flickerE {
+  0% {
+    opacity: 0.01;
+  }
+  5% {
+    opacity: 0.05;
+  }
+  10% {
+    opacity: 0.03;
+  }
+  15% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.07;
+  }
+  30% {
+    opacity: 0.1;
+  }
+  35% {
+    opacity: 0.05;
+  }
+  40% {
+    opacity: 0.06;
+  }
+  45% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.;
+  }
+  90% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+ul {
+    position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:lightgrey;
+}
+
+li {
+  float: left;
+
+ 
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 18px;
+  text-decoration: silver;
+
+}
+
+
+
+a:hover {
+  color: silver;
+} 
+
+
+
+ a:visited {
+  color: rgba(252, 172, 0, 0.726);
+  background-color: transparent;
+  text-decoration: underline;
+}
+p {
+  color: silver;
+}
+
+
+
+
+#grad1 {
+    height: 50px;
+    background: linear-gradient(rgba(72, 172, 122, .726), Black);
+  }
+
+/* container for 8ball */
+.flex-container {
+     
+     display: flexbox;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: center;
+}
+
+ #p1 { 
+  
+     width: 666px;
+     height:auto;
+      
+
+ } 
+/* begining of 8 ball code */
+ h2 { 
+     font-weight: 100; 
+     font-size: 2.5em;
+     color: rgba(72, 172, 122, .500);
+     }
+     h2:hover {
+         color: silver;
+         transition: .15s;
+     }
+     
+     #content { 
+      width: 400px; 
+      margin: 0 auto; 
+      margin-top: 50px;      
+      text-align: center; 
+      font-family: Helvetica, arial; 
+      font-weight: 100;
+    }
+     
+     div.eight-ball {
+       background-color:black;
+       border: 1px solid;
+       border-color:rgba(72, 172, 122, .900); 
+       border-radius: 50%;
+       width: 300px;
+       height: 300px;
+       margin: 0 auto;
+       margin-bottom: 30px;
+       margin-top: 30px;
+     }
+     
+     div.answer {
+       background-color:  rgb(51, 51, 51);
+       border: 1px solid rgba(72, 172, 122, .726);
+       border-radius: 50%;
+       width: 50%;
+       height: 50%;
+       margin: 25% auto;
+     }
+     
+     p#eight {
+       font-size: 5em;
+       margin: 20% auto;
+       color:  rgba(72, 172, 122, .726);
+     }
+     
+     p#answer {
+       padding: 23px;
+       color:rgba(72, 172, 122, .726);
+       letter-spacing: 2px;
+       font-size:16px;
+     }
+     
+     #question {
+       margin: 20px;
+       padding: 10px;
+       width: 300px;
+       font-size:16px;
+       background-color: rgba(72, 172, 122, .860);
+     }
+     
+     #info {
+       font-size: 16px;
+     }
+     h3 {
+         color:rgb(72, 172, 122);
+         height: 20px;
+     }
+     h3:hover {
+         color: silver;
+
+     }
