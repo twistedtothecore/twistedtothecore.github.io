@@ -93,7 +93,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #1e252d;
+		background-color: #3f464e;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -106,113 +106,6 @@ input, select, textarea {
 			-ms-transition: none !important;
 			transition: none !important;
 		}
-
-	/* color text animation */
-	p #logo {
-		-webkit-transition: color 2s !important;
-		transition: color 2s !important;
-	}
-	p #logo:hover {
-		color: green !important;
-		color: orange !important;
-		color: red !important;
-		color: purple !important;
-	}
-
-		/* The Magick flip card container */
-.flip-card {
-	
-	background-color: transparent;
-	width: 300px;
-	height: 300px;
-	border: 2px solid #202022;
-	perspective: 1000px;
-  }
-  
-  /* This will position the front and back side */
-  .flip-card-inner {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	transition: transform 0.7s;
-	transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	-webkit-backface-visibility: hidden; /* Safari */
-	backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-	background-color: #bbb;
-	color: black;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-	background-color: #3a3838;
-	color: silver;
-	transform: rotateY(180deg);
-    
-  }
-   		/* The wankel flip card container */
-		   .flip-cards {
-	
-			background-color: transparent;
-			width: 260px;
-			height: 300px;
-			border: 2px solid #202022;
-			perspective: 1000px;
-		  }
-		  
-		  /* This will position the front and back side */
-		  .flip-cards-inner {
-			position: relative;
-			width: 100%;
-			height: 100%;
-			text-align: center;
-			transition: transform 0.7s;
-			transform-style: preserve-3d;
-		  }
-		  
-		  /* Do an horizontal flip when you move the mouse over the flip box container */
-		  .flip-cards:hover .flip-cards-inner {
-			transform: rotateX(180deg);
-		  }
-		  
-		  /* Position the front and back side */
-		  .flip-cards-front, .flip-cards-back {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			-webkit-backface-visibility: hidden; /* Safari */
-			backface-visibility: hidden;
-		  }
-		  
-		  /* Style the front side (fallback if image is missing) */
-		  .flip-cards-front {
-			background-color: #bbb;
-			color: black;
-		  }
-		  
-		  /* Style the back side */
-		  .flip-cards-back {
-			background-color: #3a3838;
-			color: silver;
-			transform: rotateX(180deg);
-			
-		  }
   
   /* id for project text*/
 	
@@ -420,16 +313,16 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left-color: #eeeeee;
+		border-left-color: #eeeeee70;
 	}
 
 	code {
 		background: rgba(220, 220, 220, 0.25);
-		border-color: #eeeeee;
+		border-color: #eeeeee6c;
 	}
 
 	hr {
-		border-bottom-color: #eeeeee;
+		border-bottom-color: #eeeeee73;
 	}
 
 /* Row */
@@ -3483,7 +3376,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		color: #ffffff;
+		color: #ffffffa8;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -3513,38 +3406,38 @@ input, select, textarea {
 	}
 
 		#header input, #header select, #header textarea {
-			color: #ffffff;
+			color: #ffffff63;
 		}
 
 		#header a {
-			color: #ffffff;
+			color: #ffffff7c;
 			border-bottom-color: rgba(255, 255, 255, 0.5);
 		}
 
 			#header a:hover {
 				border-bottom-color: transparent;
-				color: #18bfef !important;
+				color: #18c0efa2 !important;
 			}
 
 		#header strong, #header b {
-			color: #ffffff;
+			color: #ffffffb9;
 		}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-			color: #ffffff;
+			color: #ffffff77;
 		}
 
 		#header blockquote {
-			border-left-color: #ffffff;
+			border-left-color: #ffffffbe;
 		}
 
 		#header code {
 			background: rgba(255, 255, 255, 0.075);
-			border-color: #ffffff;
+			border-color: #ffffff65;
 		}
 
 		#header hr {
-			border-bottom-color: #ffffff;
+			border-bottom-color: #ffffff8f;
 		}
 
 		#header .logo {
@@ -3567,8 +3460,8 @@ input, select, textarea {
 		}
 
 			#header .logo:hover {
-				border-color: #18bfef !important;
-				color: #18bfef !important;
+				border-color: #18c0efc2 !important;
+				color: #18c0efc4 !important;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -3596,7 +3489,7 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		color: #ffffff;
+		color: #ffffffc0;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3618,11 +3511,11 @@ input, select, textarea {
 	}
 
 		#nav ul.divided li {
-			border-top-color: #ffffff;
+			border-top-color: #ffffffb9;
 		}
 
 		#nav ul.icons li a.icon:hover:before {
-			color: #18bfef;
+			color: #18c0efaf;
 		}
 
 		#nav ul.icons.alt li .icon:before {
@@ -3660,7 +3553,7 @@ input, select, textarea {
 		}
 
 		#nav code {
-			background: rgba(255, 255, 255, 0.075);
+			background: rgba(255, 255, 255, 0.678);
 			border-color: #ffffff;
 		}
 
@@ -3708,19 +3601,19 @@ input, select, textarea {
 
 					#nav ul.links li a:hover {
 						color: inherit !important;
-						background-color: rgba(255, 255, 255, 0.1);
+						background-color: rgba(255, 255, 255, 0.459);
 					}
 
 				#nav ul.links li.active {
-					background-color: #ffffff;
+					background-color: #ffffffea;
 				}
 
 					#nav ul.links li.active a {
-						color: #1e252d;
+						color: #1e252da9;
 					}
 
 						#nav ul.links li.active a:hover {
-							color: #18bfef !important;
+							color: #18c0efde !important;
 						}
 
 		#nav ul.icons {
@@ -3746,7 +3639,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
+		background-color: #ffffff7e;
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
