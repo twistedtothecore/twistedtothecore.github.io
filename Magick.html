@@ -5,7 +5,6 @@
 The Bright Side Of The Dark Side
 </title>
   <link href="8ball.css" rel="stylesheet">
-  <link href="8ballsass.scss" rel="stylesheet">
 
 
 <style>
@@ -13,38 +12,16 @@ The Bright Side Of The Dark Side
 </style>
 
 </head>
-    <center>
-      
-        <h1>
-          <span id="t">T</span>
-          <span id="w">H</span>
-          <span id="e">E</span>
-          <span id="e">S</span>
-          <span id="r"></span>
-          <span id="e">M</span>
-          <span id="e">A</span>
-          <span id="t">G</span>
-          <span id="e">I</span>
-          <span id="e">C</span>
-          <span id="r"></span>
-          <span id="e">8</span>
-          <span id="t">B</span>
-          <span id="r">A</span>
-          <span id="e">L</span>
-          <span id="e">L</span>
-        </h1>
-    </center>
+    
  
 <body>
-  <!--container for fireflys-->
-  <div id="container"></div>
 
     <!-- main text body -->
     <center>
   <div class="flex-container">
     <div id="p1">
         <div id="content">
-            <h3>Ask The All Knowing 8 ball</h3>
+            <h1>Ask The All Knowing 8 ball</h1>
            
             <input type="text" id="question">
             <div id="eight-ball" class="eight-ball">
@@ -70,30 +47,6 @@ The Bright Side Of The Dark Side
 
   <footer>
     <script>
-
-      // firefly beginning
-      var total=40,
-    container=document.getElementById('container'),
-    w=window.innerWidth,
-    h=window.innerHeight,
-    Tweens=[],
-    SPs=1;
-
-for (var i=total;i--;){ 
-  var Div=document.createElement('div');
-  TweenLite.set(Div,{attr:{class:'dot'},x:R(w),y:R(h),opacity:0});
-  container.appendChild(Div); Anim(Div);  Tweens.push(Div);
-};
-
-function Anim(elm){ 
-  elm.Tween=TweenLite.to(elm,R(20)+10,{bezier:{values:[{x:R(w),y:R(h)},{x:R(w),y:R(h)}]},opacity:R(1),scale:R(1)+0.5,delay:R(2),onComplete:Anim,onCompleteParams:[elm]})
-};
-
-for(var i=total;i--;){
-  Tweens[i].Tween.play()};
-
-
-function R(max){return Math.random()*max};
 
   // Answer array
   var answers = ["It is certain", 

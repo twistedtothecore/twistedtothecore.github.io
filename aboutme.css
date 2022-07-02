@@ -4,6 +4,11 @@ box-sizing:border-box;
 font-family: Gotham Rounded, sans-serif;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .clock {
     width: 200px;
     height:200px;
@@ -83,12 +88,47 @@ font-family: Gotham Rounded, sans-serif;
     background-color: rgb(7, 235, 243);
 }
 
-body {
-    color: h3 {
-        color: rgb(0, 216, 216);
-        
-    }
+
+.flexbox-container {
+    display: flex;
 }
-body {
-    color: rgb(7, 235, 243);
+
+.flexbox-item1 {
+
+    width: 300px;
+    margin: 10px;
+    border: 3px solid cyan;
+  
+   
+   
+}
+.flexbox-item2 {
+
+    width: 300px;
+    margin: 10px;
+    border: 3px solid cyan;
+ 
+
+}
+.flexbox-item3 {
+  
+    width: 300px;
+    margin: 10px;
+    border: 3px solid cyan;
+   
+}
+.flexbox-item4 {
+
+    width: 300px;
+    margin: 10px;
+    border: 3px solid cyan;
+ 
+}
+.flexbox-item5 {
+  
+    width: 300px;
+    margin: 10px;
+    border: 3px solid cyan;
+
+
 }

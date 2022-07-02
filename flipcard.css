@@ -1,0 +1,55 @@
+*,* ::after, *::before {
+    box-sizing:border-box;
+    font-family: Gotham Rounded, sans-serif;
+    }
+
+
+body {
+
+}
+
+.flexbox-container {
+    display: flex;
+}
+
+.flexbox-item1 {
+    background-color: rgba(0, 0, 0, .4);
+    justify-content: center;
+    width: 300px;
+    margin: 10px;
+    border: 3px solid cyan;
+  
+   
+   
+}
+.flexbox-item2 {
+    background-color: rgba(0, 0, 0, .4);
+    align-items: center;
+    width: 300px;
+    margin: 10px;
+    border: 3px solid cyan;
+ 
+
+}
+.flexbox-item3 {
+    background-color: rgba(0, 0, 0, .4);
+    width: 300px;
+    margin: 10px;
+    border: 3px solid cyan;
+   
+}
+.flexbox-item4 {
+    background-color: rgba(0, 0, 0, .4);
+    width: 300px;
+    margin: 10px;
+    border: 3px solid cyan;
+ 
+}
+.flexbox-item5 {
+    background-color: rgba(0, 0, 0, .4);
+    width: 300px;
+    margin: 10px;
+    border: 3px solid cyan;
+
+
+}
