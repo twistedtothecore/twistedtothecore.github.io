@@ -21,6 +21,7 @@ function convertToWord(letter) {
 }
 
 function win(userChoice, computerChoice) {
+
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
@@ -30,7 +31,7 @@ function lose(userChoice, computerChoice) {
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = convertToWord(userChoice) + " Beats " + convertToWord(computerChoice) + ". You Lose!";
+    result_p.innerHTML = convertToWord(userChoice) + " Loses To " + convertToWord(computerChoice) + ". Try Again!";
 }
 
 
@@ -38,7 +39,7 @@ function draw(userChoice, computerChoice) {
     
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = convertToWord(userChoice) + " Beats " + convertToWord(computerChoice) + ". Its A Draw!";
+    result_p.innerHTML = convertToWord(userChoice) + " Its A Draw" + convertToWord(computerChoice);
 }
 
 
