@@ -39,7 +39,7 @@ function draw(userChoice, computerChoice) {
     
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = convertToWord(userChoice) + " Its A Draw" + convertToWord(computerChoice);
+    result_p.innerHTML = " Its A Draw";
 }
 
 
