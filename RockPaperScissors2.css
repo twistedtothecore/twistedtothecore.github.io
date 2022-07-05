@@ -75,6 +75,7 @@ header > h1 {
 
 
 .choice {
+    background-color: white;
     margin: 20px 20px;
     padding: 10px;
     border: 4px solid white;
@@ -86,7 +87,7 @@ header > h1 {
 .choice:hover {
 
     cursor: pointer;
-    background: linen;
+    background: rgb(177, 4, 4);
 }
 
 #action-message {
