@@ -11,7 +11,7 @@ const lizard_div = document.getElementById("l");
 const spock_div = document.getElementById("k");
 
 function getComputerChoice() {
-    const choices = ['r', 'p', 's'];
+    const choices = ['r', 'p', 's', 'l', 'k'];
     const randomNumber =  Math.floor(Math.random() * 5);
     return choices[randomNumber];
 }
